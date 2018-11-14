@@ -1,7 +1,21 @@
 #body{
-    background-image: url("img/forsidebillede.jpg");
+   background-color: aqua;
 }
 
 #forsidebox{
     background-color: black;
+}
+
+.columns{
+ border: 2px solid red;   
+}
+
+
+.slideIn {
+    transform: translateX(300%);
+    transition: transform 0.3s ease-in-out;
+}
+.slideInView {
+    transform: translateX(0);
+    transition: transform 0.3s ease-in-out;
 }
