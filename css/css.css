@@ -16,7 +16,7 @@
 
 .introBox{
     background-color: darkgray;
-    padding-bottom: 20%;
+    padding-bottom: 30%;
     border-radius: 0 0 15px 15px;
     box-shadow: 11px 12px 32px 0px rgba(0,0,0,0.75);
 }
@@ -25,8 +25,7 @@
     font-family: 'Roboto', sans-serif;
     font-size: 3em;
     color: #FAD570;
-
->>>>>>> 0bdfeb75576bb0dd894b14988f418a3817556666
+    margin-top: -100px;
 }
 
 #forsidebox{
