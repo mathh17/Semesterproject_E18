@@ -12,9 +12,16 @@
 
 .introBox{
     background-color: darkgray;
-    padding-bottom: 30%;
+    padding-bottom: 20%;
     border-radius: 0 0 15px 15px;
     box-shadow: 11px 12px 32px 0px rgba(0,0,0,0.75);
+}
+
+.lowerText{
+    font-family: 'Roboto', sans-serif;
+    font-size: 3em;
+    color: #FAD570;
+
 }
 
 #forsidebox{
