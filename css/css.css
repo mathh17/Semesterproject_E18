@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 #body{
    background-color: aqua;
-=======
+}
 #body {
     background-color: lightgray;
 }
@@ -19,6 +19,7 @@
     padding-bottom: 30%;
     border-radius: 0 0 15px 15px;
     box-shadow: 11px 12px 32px 0px rgba(0,0,0,0.75);
+    z-index: 100;
 }
 
 .lowerText{
