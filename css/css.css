@@ -1,5 +1,20 @@
-#body{
-    background-image: url("img/forsidebillede.jpg");
+#body {
+    background-color: lightgray;
+}
+
+.introHeadline {
+    font-family: 'Bungee Shade', cursive;
+    font-size: 6em;
+    color: #FAD570;
+    
+}
+
+
+.introBox{
+    background-color: darkgray;
+    padding-bottom: 30%;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 11px 12px 32px 0px rgba(0,0,0,0.75);
 }
 
 #forsidebox{
