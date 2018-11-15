@@ -42,7 +42,7 @@
     position: fixed;
     right: 0;
     top: 70px;
-    width: 250px;
+    width: 70vw;
     height: calc(100vh - 70px);
     background-color: #333;
     transform: translateX(100%);
