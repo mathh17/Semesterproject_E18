@@ -52,6 +52,7 @@
 .textSettings p{
     font-size: 40px;
     font-family: 'Allerta Stencil', sans-serif;
+    margin: 0px 0px 10px 0px;
     text-align: center;
     padding-top: 35px;
     color: white;
@@ -78,11 +79,10 @@ p::first-letter {
 }*/
 
 .VRimage{
-    position: relative;
+    position: auto;
    
     
     left: 160px;
-    top: 70%;
     width: 20%;
 
 }
