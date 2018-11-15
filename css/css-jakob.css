@@ -1,48 +1,64 @@
-<<<<<<< HEAD
-#body{
-   background-color: aqua;
-}
 #body {
     background-color: lightgray;
+    height: 100vh;
+}
+
+.introBox {
+    height: 90vh;
+    background-image: url(../img/intropng.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 115%;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 4px 6px 15px 1px rgba(0, 0, 0, 0.75);
 }
 
 .introHeadline {
+    position: fixed;
+    text-align: center;
+    width: 70vw;
     font-family: 'Bungee Shade', cursive;
-    font-size: 6em;
+    font-size: 7em;
+    letter-spacing: 20px;
     color: #FAD570;
+    text-shadow: 1px 1px 1px #000000;
+    margin-top: 30vh;
+    transition: all 1s ease-in;
+
+}
+
+.introHeadlineTransision {
+    margin-top: 0vh;
+    font-size: 4em;
+    letter-spacing: 2px;
+}
+
+.lowerText {
+    position: fixed;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
+    color: #FAD570;
+    text-shadow: 1px 1px 1px #000000;
+    word-spacing: 5px;
+    margin-top: 50vh;
+    width: 70vw;
+    transition: all 1s ease-in;
+}
+.lowerTextTransision {
+    margin-top: 10vh;
+    width: 72vw;
+    font-size: 1em;
+    letter-spacing: 2px;
     
 }
 
-
-.introBox{
-    background-color: darkgray;
-    padding-bottom: 30%;
-    border-radius: 0 0 15px 15px;
-    box-shadow: 11px 12px 32px 0px rgba(0,0,0,0.75);
-    z-index: 100;
+.introBigLetter {
+    font-size: 60px;
+    transition: all 1s ease-in;
 }
 
-.lowerText{
-    font-family: 'Roboto', sans-serif;
-    font-size: 3em;
-    color: #FAD570;
-    margin-top: -100px;
-}
-
-#forsidebox{
-    background-color: black;
-}
-
-.columns{
- border: 2px solid red;   
-}
-
-
-.slideIn {
-    transform: translateX(300%);
-    transition: transform 0.3s ease-in-out;
-}
-.slideInView {
-    transform: translateX(0);
-    transition: transform 0.3s ease-in-out;
+.introBigLetterTransision{
+    font-size: 20px;
+    letter-spacing: 0px;
 }
