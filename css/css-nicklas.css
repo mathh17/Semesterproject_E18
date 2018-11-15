@@ -7,7 +7,7 @@
 
 
     margin-top: 20vh;
-    padding: 15vh;
+    padding: 5vh;
     box-shadow: 3px 3px 10px grey;
 }
 
@@ -15,7 +15,7 @@
 
 
     margin-top: 5vh;
-    padding: 15vh;
+    padding: 5vh;
     box-shadow: 3px 3px 10px grey;
 }
 
@@ -26,24 +26,65 @@
 }
 
 .bgContentBoxImage1{
-    background-image: url('../img/WaterWithLemon.jpg');
+    background-image: url('../img/VRGlasses.jpg.jpg');
+    background-position: center;
+    background-size: cover;
 }
 
 .bgContentBoxImage2{
     background-image: url('../img/TwoBeers.jpg');
+    background-position: center;
+    background-size: cover;
 }
 
 .bgContentBoxImage3{
     background-image: url('../img/TwoHappyPeople.jpg');
+    background-position: center;
+    background-size: cover;
 }
 
 .bgContentBoxImage4{
     background-image: url('../img/Hangover.jpg');
+    background-position: center;
+    background-size: cover;
 }
 
-.contentText{
-    font-size: 60px;
+.textSettings p{
+    font-size: 40px;
     font-family: 'Allerta Stencil', sans-serif;
+    margin: 0px 0px 10px 0px;
+    text-align: center;
+    padding-top: 35px;
     color: white;
     text-shadow: 2px 2px 4px #000000;
 }
+
+p::first-letter {
+  font-size: 70px;
+  font-weight: bold;
+  color: blue;
+}
+
+/*
+.hovereffekt {
+    
+    background-size: 100% 200%;
+    background-image: linear-gradient(to top, red 50%);
+    transition: background-position 1s;
+}
+
+.hovereffekt:hover{
+    background-position: 0% 100%;
+    opacity: 0.1;
+}*/
+
+.VRimage{
+    position: auto;
+   
+    
+    left: 160px;
+    width: 20%;
+
+}
+
+
