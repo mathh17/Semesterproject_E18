@@ -1,5 +1,6 @@
 $( document ).ready(function() {
-   $("#slideButton").click(function(){
+
+   $(".slideInBtn, .infoBoxEscBtn, .opacity").click(function(){
        $("#slideInBox").toggleClass("slideInView");
        $("#overlay").toggleClass("opacity");
    });
