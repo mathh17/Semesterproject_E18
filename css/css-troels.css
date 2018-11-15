@@ -1,0 +1,54 @@
+<<<<<<< HEAD
+#body{
+   background-color: aqua;
+    overflow: hidden;
+}
+#body {
+    background-color: lightgray;
+}
+
+.introHeadline {
+    font-family: 'Bungee Shade', cursive;
+    font-size: 6em;
+    color: #FAD570;
+    
+}
+
+
+.introBox{
+    background-color: darkgray;
+    padding-bottom: 30%;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 11px 12px 32px 0px rgba(0,0,0,0.75);
+    z-index: 100;
+}
+
+.lowerText{
+    font-family: 'Roboto', sans-serif;
+    font-size: 3em;
+    color: #FAD570;
+    margin-top: -100px;
+}
+
+#forsidebox{
+    background-color: black;
+}
+
+.columns{
+ border: 2px solid red;   
+}
+
+.slideIn {
+    position: fixed;
+    right: 0;
+    top: 70px;
+    width: 250px;
+    height: calc(100vh - 70px);
+    background-color: #333;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 200;
+}
+.slideInView {
+    transform: translateX(0);
+}
