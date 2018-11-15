@@ -1,0 +1,48 @@
+<<<<<<< HEAD
+#body{
+   background-color: aqua;
+}
+#body {
+    background-color: lightgray;
+}
+
+.introHeadline {
+    font-family: 'Bungee Shade', cursive;
+    font-size: 6em;
+    color: #FAD570;
+    
+}
+
+
+.introBox{
+    background-color: darkgray;
+    padding-bottom: 30%;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 11px 12px 32px 0px rgba(0,0,0,0.75);
+    z-index: 100;
+}
+
+.lowerText{
+    font-family: 'Roboto', sans-serif;
+    font-size: 3em;
+    color: #FAD570;
+    margin-top: -100px;
+}
+
+#forsidebox{
+    background-color: black;
+}
+
+.columns{
+ border: 2px solid red;   
+}
+
+
+.slideIn {
+    transform: translateX(300%);
+    transition: transform 0.3s ease-in-out;
+}
+.slideInView {
+    transform: translateX(0);
+    transition: transform 0.3s ease-in-out;
+}
