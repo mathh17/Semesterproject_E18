@@ -1,4 +1,3 @@
-
 #body{
     background-color: #FC4445;
 }
@@ -163,6 +162,91 @@ h3{
     left: 160px;
     width: 20%;
 
+}
+/*Jakob*/
+#body {
+    background-color: lightgray;
+    height: 100vh;
+    width: 100vw;
+}
+
+.introBox {
+    height: 90vh;
+    background-image: url(../img/intropng.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 115%;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 4px 6px 15px 1px rgba(0, 0, 0, 0.75);
+}
+
+.introHeadline {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'Bungee Shade', cursive;
+    font-size: 7em;
+    letter-spacing: 20px;
+    color: #FAD570;
+    text-shadow: 1px 1px 1px #000000;
+    transition: all 1s ease-in;
+
+}
+
+.introHeadlineTransision {
+    top: 10%;
+    font-size: 4em;
+    letter-spacing: 2px;
+}
+
+.lowerText {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
+    color: #FAD570;
+    text-shadow: 1px 1px 1px #000000;
+    word-spacing: 5px;
+    transition: all 1s ease-in;
+}
+
+.lowerTextTransision {
+    top: 11%;
+    font-size: 1em;
+    letter-spacing: 2px;
+
+}
+
+.introBigLetter {
+    font-size: 60px;
+    transition: all 1s ease-in;
+}
+
+.introBigLetterTransision {
+    font-size: 20px;
+    letter-spacing: 0px;
+}
+
+.beerimg {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 5%;
+    opacity: 0.8;
+}
+
+.clickToContinueText {
+    font-family: 'Bungee Shade', cursive;
+    position: absolute;
+    top: 87%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FAD570;
 }
 
 
