@@ -1,11 +1,6 @@
 #body {
-    background-image: url(../img/intropngOpacity.png);
-    background-position: center;
-    background-size: 115%;
+    background-color: lightgray;
     height: 100vh;
-}
-#body.img{
-    opacity: 0.1;
 }
 
 .contentBoxesTop {
@@ -94,12 +89,12 @@
 }*/
 
 .VRimage{
-    width: 8%;
-    /*height: 20px;*/
-    background-image: url('../img/VR.png');
-    /*background-repeat: no-repeat;
+    width: 10%;
+    height: 20px;
+    /*background-image: url('../img/VR.png');*/
+    background-repeat: no-repeat;
     transform: scale(1.5, 1.5);
-    background-size: contain;*/
+    background-size: contain;
 
 }
 
