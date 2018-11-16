@@ -50,6 +50,7 @@
 }
 
 .textSettings p{
+
     font-size: 40px;
     font-family: 'Allerta Stencil', sans-serif;
     margin: 0px 0px 10px 0px;
@@ -59,7 +60,7 @@
     text-shadow: 2px 2px 4px #000000;
 }
 
-p::first-letter {
+.textSettings p:first-letter {
   font-size: 70px;
   font-weight: bold;
   color: blue;
@@ -78,13 +79,22 @@ p::first-letter {
     opacity: 0.1;
 }*/
 
-.VRimage{
+/*.VRimage{
     position: auto;
    
     
     left: 160px;
     width: 20%;
 
-}
+}*/
 
+.VRimage{
+    width: 8%;
+    /*height: 20px;*/
+    background-image: url('../img/VR.png');
+    /*background-repeat: no-repeat;
+    transform: scale(1.5, 1.5);
+    background-size: contain;*/
+
+}
 
