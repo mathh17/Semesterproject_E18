@@ -15,52 +15,71 @@
 }
 
 .introHeadline {
-    position: fixed;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
     font-family: 'Bungee Shade', cursive;
-    left:25%;
     font-size: 7em;
     letter-spacing: 20px;
     color: #FAD570;
     text-shadow: 1px 1px 1px #000000;
-    margin-top: 30vh;
     transition: all 1s ease-in;
 
 }
 
 .introHeadlineTransision {
-    margin-top: 0vh;
-    left: 37.5vw;
+    top: 10%;
     font-size: 4em;
     letter-spacing: 2px;
 }
 
 .lowerText {
-    position: fixed;
-    text-align: center;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-family: 'Roboto', sans-serif;
     font-size: 2em;
     color: #FAD570;
     text-shadow: 1px 1px 1px #000000;
     word-spacing: 5px;
-    margin-top: 50vh;
-    width: 70vw;
     transition: all 1s ease-in;
 }
+
 .lowerTextTransision {
-    margin-top: 10vh;
-    width: 72vw;
+    top: 11%;
     font-size: 1em;
     letter-spacing: 2px;
-    
+
 }
+
 
 .introBigLetter {
     font-size: 60px;
     transition: all 1s ease-in;
 }
 
-.introBigLetterTransision{
+.introBigLetterTransision {
     font-size: 20px;
     letter-spacing: 0px;
+}
+
+.beerimg {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 5%;
+    opacity: 0.8;
+}
+
+.clickToContinueText {
+    font-family: 'Bungee Shade', cursive;
+    position: absolute;
+    top: 87%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FAD570;
 }
