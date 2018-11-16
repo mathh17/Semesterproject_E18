@@ -1,6 +1,11 @@
 #body {
-    background-color: lightgray;
+    background-image: url(../img/intropngOpacity.png);
+    background-position: center;
+    background-size: 115%;
     height: 100vh;
+}
+#body.img{
+    opacity: 0.1;
 }
 
 .contentBoxesTop {

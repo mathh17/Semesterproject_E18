@@ -1,6 +1,7 @@
 #body {
     background-color: lightgray;
     height: 100vh;
+    width: 100vw;
 }
 
 .introBox {
@@ -16,8 +17,8 @@
 .introHeadline {
     position: fixed;
     text-align: center;
-    width: 70vw;
     font-family: 'Bungee Shade', cursive;
+    left:25%;
     font-size: 7em;
     letter-spacing: 20px;
     color: #FAD570;
@@ -29,6 +30,7 @@
 
 .introHeadlineTransision {
     margin-top: 0vh;
+    left: 37.5vw;
     font-size: 4em;
     letter-spacing: 2px;
 }
