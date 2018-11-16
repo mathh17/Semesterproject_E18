@@ -1,7 +1,11 @@
-$( document ).ready(function() {
+$(document).ready(function () {
 
-   $(".slideInBtn, .infoBoxEscBtn, .opacity").click(function(){
-       $("#slideInBox").toggleClass("slideInView");
-       $("#overlay").toggleClass("opacity");
-   });
+    $(".slideInBtn, .infoBoxEscBtn").click(function () {
+        $("#slideInBox").toggleClass("slideInView");
+        $("#overlay").toggleClass("opacity");
+        $(".opacity").click(function () {
+            $("#slideInBox").removeClass("slideInView");
+            $("#overlay").removeClass("opacity");
+        });
+    });
 });
