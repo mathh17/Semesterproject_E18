@@ -4,25 +4,6 @@
     width: 100vw;
 }
 
-.introHeadline {
-    font-family: 'Bungee Shade', cursive;
-    font-size: 6em;
-    color: #FAD570;
-    
-}
-.introBox{
-    padding-bottom: 30%;
-    box-shadow: 11px 12px 32px 0px rgba(0,0,0,0.75);
-    z-index: 100;
-}
-
-.lowerText{
-    font-family: 'Roboto', sans-serif;
-    font-size: 3em;
-    color: #FAD570;
-    margin-top: -100px;
-}
-
 
 #infoBoxImg{
     background-image: url("../img/Hangover.jpg");
