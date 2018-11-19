@@ -9,16 +9,16 @@ $(document).ready(function () {
         });
     });
 
-    
-     $(".clickToContinueBeer").click(function () {
-        $(".introBox").slideUp();
+
+    $(".clickToContinueBeer").click(function () {
+        $(".introBox").slideUp("slow");
         $(".introHeadline").addClass("introHeadlineTransision");
         $(".lowerText").addClass("lowerTextTransision");
         $(".introBigLetter").addClass("introBigLetterTransision");
         $(".clickToContinueBeer").remove();
     });
 
-    
+
     (function pulse(back) {
         $('.beerimg img').animate({
             width: (back) ? $('.beerimg img').width() + 20 : $('.beerimg img').width() - 20
@@ -30,22 +30,9 @@ $(document).ready(function () {
             pulse(!back)
         });
     })(false);
-    
-    $(window).scroll(function(){ //onscroll
-        var scrolleddown = false;//used to keep the state
-        if($(window).scrollTop() > 1){ //if they've scrolled down
-            if(scrolleddown == false){
-                scrolleddown = true;
-                $('#content').stop(true, false).animate({top:'0%'},500,function(){//show it
-                    $('#topcontent').hide();//hide to original content, in this case "hi!"'s
-                    $(this).css("position","relative"); //make it be able to scroll down
-                });
-            }
-        }else{
-            //below resets everything back to original state when user scrolls back up
-            scrolleddown = false;
-            $('#topcontent').show();
-                $('#content').css("position","fixed").stop(true, false).animate({top:'99%'},500)
-        }
+
+       $('html, body').css({
+        overflow: 'hidden',
+        height: '100wh'
     });
-});
+})
