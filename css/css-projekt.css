@@ -1,6 +1,10 @@
 #body{
-    position: relative;
-    background-color: green;
+
+    /*background-image: url(../img/intropngOpacity.png);
+       background-repeat: no-repeat;
+    background-position: center;
+    background-size: 115%;*/
+    background-color: lightgray;
     height: 100vh;
     width: 100vw;
 }
@@ -8,7 +12,7 @@
 
 #infoBoxImg{
     background-image: url("../img/Hangover.jpg");
-    background-size:     cover;                      
+    background-size:     cover;                      /* <------ */
     background-repeat:   no-repeat;
     background-position: center center;
     height: 50%;
@@ -34,7 +38,6 @@ h3{
 }
 #infoBoxText{
     padding: 35px 40px;
-    
 }
 .slideIn {
     position: fixed;
@@ -51,7 +54,7 @@ h3{
     transform: translateX(0);
 }
 
-.opacity{
+.OpacityOverLeftSideOnSlideIn{
     width: 100%;
     height: 100vh;
     position: absolute;
@@ -74,43 +77,44 @@ h3{
 
 .contentBoxesBottom {
 
-
     margin-top: 5vh;
     padding: 5vh;
     box-shadow: 3px 3px 10px grey;
 }
 
-.contentBoxesTop:hover, .contentBoxesBottom:hover {
-  box-shadow:10px 10px 5px rgba(33,33,33,.2); 
-  transition: all 0.2s ease-in-out;
-  transform: scale(1.05);
+.contentBoxesTop:hover,
+.contentBoxesBottom:hover {
+    box-shadow: 10px 10px 5px rgba(33, 33, 33, .2);
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.05);
 }
 
-.bgContentBoxImage1{
+.bgContentBoxImage1 {
     background-image: url('../img/VRGlasses.jpg.jpg');
     background-position: center;
     background-size: cover;
 }
 
-.bgContentBoxImage2{
+.bgContentBoxImage2 {
     background-image: url('../img/TwoBeers.jpg');
     background-position: center;
     background-size: cover;
 }
 
-.bgContentBoxImage3{
+.bgContentBoxImage3 {
     background-image: url('../img/TwoHappyPeople.jpg');
     background-position: center;
     background-size: cover;
 }
 
-.bgContentBoxImage4{
+.bgContentBoxImage4 {
     background-image: url('../img/Hangover.jpg');
     background-position: center;
     background-size: cover;
 }
 
-.textSettings p{
+.textSettings p {
+
     font-size: 40px;
     font-family: 'Allerta Stencil', sans-serif;
     margin: 0px 0px 10px 0px;
@@ -120,33 +124,50 @@ h3{
     text-shadow: 2px 2px 4px #000000;
 }
 
-.textSettings p:first-letter{
-  font-size: 70px;
-  font-weight: bold;
-  color: #55BCC9;
+.textSettings p:first-letter {
+    font-size: 70px;
+    font-weight: bold;
+    color: blue;
 }
 
-/*
-.hovereffekt {
-    
-    background-size: 100% 200%;
-    background-image: linear-gradient(to top, red 50%);
-    transition: background-position 1s;
-}
-
-.hovereffekt:hover{
-    background-position: 0% 100%;
-    opacity: 0.1;
-}*/
-
-.VRimage{
-    position: auto;
-   
-    
-    left: 160px;
-    width: 20%;
+.VRimage {
+    width: 10%;
+    height: 20px;
+    /*background-image: url('../img/VR.png');*/
+    background-repeat: no-repeat;
+    transform: scale(2, 2);
+    background-size: contain;
 
 }
+
+#firstpichover:hover #VRimage {
+    animation: wiggle 0.5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(6deg);
+    }
+
+    50% {
+        transform: rotate(-6deg);
+    }
+
+    100% {
+        transform: rotate(6deg);
+    }
+}
+
+a.wiggle-me:hover {
+    -ms-animation: wiggle .3s 2;
+    -moz-animation: wiggle .3s 2;
+    -webkit-animation: wiggle .3s 2;
+    animation: wiggle .3s 2;
+}
+
+
+
 /*Jakob*/
 
 .introBox {
