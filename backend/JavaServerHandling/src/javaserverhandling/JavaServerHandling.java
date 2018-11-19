@@ -5,6 +5,14 @@
  */
 package javaserverhandling;
 
+import io.javalin.Javalin;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+
 /**
  *
  * @author Mathias-Ø
@@ -17,5 +25,7 @@ public class JavaServerHandling {
     public static void main(String[] args) {
         // TODO code application logic here
     }
+    public String readFromDB(){
     
+    }
 }
