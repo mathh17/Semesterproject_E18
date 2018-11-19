@@ -2,10 +2,10 @@ $(document).ready(function () {
 
     $(".slideInBtn, .infoBoxEscBtn").click(function () {
         $("#slideInBox").toggleClass("slideInView");
-        $("#overlay").toggleClass("opacity");
-        $(".opacity").click(function () {
+        $("#opacityOverlay").toggleClass("OpacityOverLeftSideOnSlideIn");
+        $(".OpacityOverLeftSideOnSlideIn").click(function () {
             $("#slideInBox").removeClass("slideInView");
-            $("#overlay").removeClass("opacity");
+            $("#opacityOverlay").removeClass("OpacityOverLeftSideOnSlideIn");
         });
     });
      $(".clickToContinueBeer").click(function () {
