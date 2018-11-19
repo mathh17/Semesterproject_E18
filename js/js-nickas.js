@@ -1,25 +1,11 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
-    $('img').jrumble({
+    /*$(".bgContentBoxImage2").hover(function () {
+        $("#test").wiggle( {times:2}, 500 );
+    });*/
+    
+    /*$(".bgContentBoxImage2").hover(function () {
+        $('#wiggle').wiggle;
+    });*/
 
-        x: 2,
-
-        y: 2,
-
-        rotation: 1
-
-    });
-
- 
-
-    $('img').hover(function() {
-
-        $(this).trigger('startRumble');
-
-    }, function() {
-
-        $(this).trigger('stopRumble');
-
-    });
-
-});​
+});
