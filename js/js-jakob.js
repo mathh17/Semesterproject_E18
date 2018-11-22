@@ -1,16 +1,15 @@
 $(document).ready(function () {
 
-
-    /*setTimeout(
-        function () {
-            $(".introBox").slideUp();
-            $(".introHeadline").addClass("introHeadlineTransision");
-            $(".lowerText").addClass("lowerTextTransision");
-            $(".introBigLetter").addClass("introBigLetterTransision");
-        }, 5000);*/
-
+    $(".slideInBtn, .infoBoxEscBtn").click(function () {
+        $("#slideInBox").toggleClass("slideInView");
+        $("#opacityOverlay").toggleClass("OpacityOverLeftSideOnSlideIn");
+        $(".OpacityOverLeftSideOnSlideIn").click(function () {
+            $("#slideInBox").removeClass("slideInView");
+            $("#opacityOverlay").removeClass("OpacityOverLeftSideOnSlideIn");
+        });
+    });
     $(".clickToContinueBeer").click(function () {
-        $(".introBox").slideUp();
+        $(".introBox").slideUp("slow");
         $(".introHeadline").addClass("introHeadlineTransision");
         $(".lowerText").addClass("lowerTextTransision");
         $(".introBigLetter").addClass("introBigLetterTransision");
@@ -18,33 +17,31 @@ $(document).ready(function () {
     });
 
 
-
-    (function pulse(back) {
-        $('.beerimg img').animate({
-            width: (back) ? $('.beerimg img').width() + 20 : $('.beerimg img').width() - 20
-        }, 2000);
-        $('.beerimg img').animate({
-            'font-size': (back) ? '100px' : '140px',
-            opacity: (back) ? 1 : 0.5
-        }, 2000, function () {
-            pulse(!back)
-        });
-    })(false);
-
-
-    (function pulse(back) {
-        $('.clickToContinueText').animate({
-            width: (back) ? $('.clickToContinueText').width() + 20 : $('clickToContinueText').width() - 20
-        }, 2000);
-        $('.clickToContinueText').animate({
-            'font-size': (back) ? '100px' : '140px',
-            opacity: (back) ? 1 : 0.5
-        }, 2000, function () {
-            pulse(!back)
-        });
-    })(false);
+     (function pulse(back) {
+         $('.beerimg img').animate({
+             width: (back) ? $('.beerimg img').width() + 10 : $('.beerimg img').width() - 10
+         }, 2000);
+         $('.beerimg').animate({
+             opacity: (back) ? 1 : 0.8
+         }, 2000, function () {
+             pulse(!back)
+         });
+ 
+     })(false);
+    
+    (function pulse(isBack) {
+         $('.clickToContinueText').animate({
+             opacity: (isBack) ? 1 : 0.5
+         }, 2000, function () {
+             pulse(!isBack)
+         });
+     })(false);
 
 
 
+    $('html').css({
+        overflow: 'hidden'
+    });
 
-});
+
+})
