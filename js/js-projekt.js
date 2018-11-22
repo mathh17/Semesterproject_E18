@@ -1,6 +1,20 @@
 $(document).ready(function () {
+    //prøv at få den tila t fade frem efter et par sekunder.
+  /*  $('.introHeadline').hide();
+    $('.lowerText').hide();
+    $('.beerimg img').hide();
+    $('.clickToContinueText').hide();*/
+    /*$('.introHeadline').delay(3000).fadeIn('slow')*/
+   /* setTimeout(
+        function () {
+           $('.introHeadline').fadeIn('slow');
+        }, 3000);
+    setTimeout(
+        function () {
+           $('.lowerText').fadeIn('slow');
+        }, 4000);*/
 
-      $(".slideInBtn, .infoBoxEscBtn").click(function () {
+    $(".slideInBtn, .infoBoxEscBtn").click(function () {
         $("#slideInBox").toggleClass("slideInView");
         $("#opacityOverlay").toggleClass("OpacityOverLeftSideOnSlideIn");
         $(".OpacityOverLeftSideOnSlideIn").click(function () {
@@ -29,7 +43,7 @@ $(document).ready(function () {
         });
     })(false);
 
-       $('html').css({
+    $('html').css({
         overflow: 'hidden'
     });
 })
