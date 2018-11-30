@@ -19,7 +19,12 @@
                         	console.log( i , arr[i]);
                         }
                         console.log(arr[1]);
-                        $('body').append('Response from the Java web server:<br>' + arr[2]);
+                    
+                        $('#question').append(arr[1]);
+                        $('#svar1').text(arr[2]);
+                        $('#svar2').append(arr[3]);
+                        $('#svar3').append(arr[4]);
+                        $('#facit').append(arr[5]);
                     },
                     error: function (data) {
                         console.log("error!");
@@ -32,9 +37,15 @@
             });
         </script>   
 
-        <title>Simple test of WebAPI</title>
+        <title>Quiz page</title>
     </head>
     <body>
-        <h1>Simple test of WebAPI</h1>
+        <h1>Det er her quizzen vil være</h1>
+        
+        <div id="question"> </div>
+        <button id="svar1"></button>
+        <button id="svar2"></button>
+        <button id="svar3"></button>
+        <div id="facit"></div>
     </body>
 </html>	

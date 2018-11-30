@@ -4,17 +4,33 @@ $(document).ready(function () {
         function () {
             $(".introHeadline").addClass("introHeadlineOpcaity");
         }, 4000);
-    
-     setTimeout(
+
+    setTimeout(
         function () {
             $(".lowerText").addClass("lowerTextOpacity");
-        }, 5500);
-    
-      setTimeout(
-        function () {
             $(".beerimg").addClass("beerimgOpacity");
-        }, 4500);
+        }, 5500);
 
+
+    setTimeout(
+        
+        function () {
+             (function pulse(back) {
+                $('.beerimg img').animate({
+                    width: (back) ? $('.beerimg img').width() + 20 : $('.beerimg img').width() - 20
+                }, 2000);
+                $('.beerimg').animate({
+                    'font-size': (back) ? '100px' : '140px',
+                    /*opacity: (back) ? 1 : 0.5*/
+                }, 2000, function () {
+                    pulse(!back)
+                });
+            })(false);
+            
+        }, 6000);
+
+    
+   
 
 
 
@@ -38,17 +54,7 @@ $(document).ready(function () {
 
 
 
-    (function pulse(back) {
-        $('.beerimg img').animate({
-            width: (back) ? $('.beerimg img').width() + 20 : $('.beerimg img').width() - 20
-        }, 2000);
-        $('.beerimg').animate({
-            'font-size': (back) ? '100px' : '140px',
-            opacity: (back) ? 1 : 0.5
-        }, 2000, function () {
-            pulse(!back)
-        });
-    })(false);
+
 
     $('html').css({
         overflow: 'hidden'
