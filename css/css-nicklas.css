@@ -66,12 +66,16 @@
     color: blue;
 }
 
-.bookIcon{
+.computerIcon{
     width: 7% !important;
 }
 
+.bookIcon{
+    width: 8% !important;
+}
+
 .boxIcons {
-    width: 10%;
+    width: 9%;
 
     /*background-image: url('../img/VR.png');*/
     background-repeat: no-repeat;
