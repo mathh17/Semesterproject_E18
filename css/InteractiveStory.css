@@ -1,3 +1,9 @@
-h1{
-    margin: 0px auto;
+#canvas{
+    width: 100%;
+    height: 60vh;
+    border: 2px solid black;
+}
+
+button{
+    margin-top: 20px;
 }
