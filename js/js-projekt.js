@@ -1,18 +1,22 @@
 $(document).ready(function () {
-    //prøv at få den tila t fade frem efter et par sekunder.
-  /*  $('.introHeadline').hide();
-    $('.lowerText').hide();
-    $('.beerimg img').hide();
-    $('.clickToContinueText').hide();*/
-    /*$('.introHeadline').delay(3000).fadeIn('slow')*/
-   /* setTimeout(
-        function () {
-           $('.introHeadline').fadeIn('slow');
-        }, 3000);
+
     setTimeout(
         function () {
-           $('.lowerText').fadeIn('slow');
-        }, 4000);*/
+            $(".introHeadline").addClass("introHeadlineOpcaity");
+        }, 4000);
+    
+     setTimeout(
+        function () {
+            $(".lowerText").addClass("lowerTextOpacity");
+        }, 5500);
+    
+      setTimeout(
+        function () {
+            $(".beerimg").addClass("beerimgOpacity");
+        }, 4500);
+
+
+
 
     $(".slideInBtn, .infoBoxEscBtn").click(function () {
         $("#slideInBox").toggleClass("slideInView");
@@ -24,11 +28,14 @@ $(document).ready(function () {
     });
     $(".clickToContinueBeer").click(function () {
         $(".introBox").slideUp("slow");
-        $(".introHeadline").addClass("introHeadlineTransision");
-        $(".lowerText").addClass("lowerTextTransision");
+        $(".introHeadlineOpcaity").addClass("introHeadlineTransision");
+        $(".lowerTextOpacity").addClass("lowerTextTransision");
         $(".introBigLetter").addClass("introBigLetterTransision");
         $(".clickToContinueBeer").remove();
     });
+
+
+
 
 
     (function pulse(back) {
