@@ -34,12 +34,21 @@ $(document).ready(function () {
 
 
 
-    $(".slideInBtn, .infoBoxEscBtn").click(function () {
-        $("#slideInBox").toggleClass("slideInView");
-        $("#opacityOverlay").toggleClass("OpacityOverLeftSideOnSlideIn");
-        $(".OpacityOverLeftSideOnSlideIn").click(function () {
-            $("#slideInBox").removeClass("slideInView");
-            $("#opacityOverlay").removeClass("OpacityOverLeftSideOnSlideIn");
+    $(".slideInBtnVR, .infoBoxEscBtnVR").click(function () {
+        $("#slideInBoxVR").toggleClass("slideInViewVR");
+        $("#opacityOverlayVR").toggleClass("OpacityOverLeftSideOnSlideInVR");
+        $(".OpacityOverLeftSideOnSlideInVR").click(function () {
+            $("#slideInBoxVR").removeClass("slideInViewVR");
+            $("#opacityOverlayVR").removeClass("OpacityOverLeftSideOnSlideInVR");
+        });
+    });
+    
+    $(".slideInBtnStory, .infoBoxEscBtnStory").click(function () {
+        $("#slideInBoxStory").toggleClass("slideInViewStory");
+        $("#opacityOverlayStory").toggleClass("OpacityOverLeftSideOnSlideInStory");
+        $(".OpacityOverLeftSideOnSlideInStory").click(function () {
+            $("#slideInBoxStory").removeClass("slideInViewStory");
+            $("#opacityOverlayStory").removeClass("OpacityOverLeftSideOnSlideInStory");
         });
     });
     $(".clickToContinueBeer").click(function () {

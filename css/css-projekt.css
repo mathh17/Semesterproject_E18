@@ -10,13 +10,6 @@
 }
 
 
-#infoBoxImg{
-    background-image: url("../img/Hangover.jpg");
-    background-size:     cover;                      /* <------ */
-    background-repeat:   no-repeat;
-    background-position: center center;
-    height: 50%;
-}
 h1{
     margin: 0px 0px 5px 0px;
 }
@@ -25,7 +18,16 @@ h3{
     color: gray;
 }
 
-.infoBoxEscBtn{
+/*Slide in Boxes*/
+#infoBoxImgVR{
+    background-image: url("../img/Hangover.jpg");
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;
+    height: 50%;
+}
+
+.infoBoxEscBtnVR{
     background-color: transparent;
     outline: none;
     border: none;
@@ -36,25 +38,73 @@ h3{
     padding-right: 15px;
     
 }
-#infoBoxText{
+#infoBoxTextVR{
     padding: 35px 40px;
 }
-.slideIn {
+.slideInVR {
     position: fixed;
     right: 0;
     top: 0px;
     width: 70vw;
     height: 100vh;
-    background-color: #CAFAFE;
+    background-color: #B4A5E1;
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
     z-index: 200;
 }
-.slideInView {
+.slideInViewVR {
     transform: translateX(0);
 }
 
-.OpacityOverLeftSideOnSlideIn{
+.OpacityOverLeftSideOnSlideInVR{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    z-index: 99;
+    background: #111;
+    cursor: pointer;
+}
+#infoBoxImgStory{
+    background-image: url("../img/Hangover.jpg");
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;
+    height: 50%;
+}
+
+.infoBoxEscBtnStory{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 30px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 15px;
+    padding-right: 15px;
+    
+}
+#infoBoxTextStory{
+    padding: 35px 40px;
+}
+.slideInStory {
+    position: fixed;
+    right: 0;
+    top: 0px;
+    width: 70vw;
+    height: 100vh;
+    background-color: #8763F3;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 200;
+}
+.slideInViewStory {
+    transform: translateX(0);
+}
+
+.OpacityOverLeftSideOnSlideInStory{
     width: 100%;
     height: 100vh;
     position: absolute;
