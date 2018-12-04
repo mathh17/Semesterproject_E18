@@ -115,6 +115,104 @@ h3{
     background: #111;
     cursor: pointer;
 }
+
+#infoBoxImgQuiz{
+    background-image: url("../img/Hangover.jpg");
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;
+    height: 50%;
+}
+
+.infoBoxEscBtnQuiz{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 30px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 15px;
+    padding-right: 15px;
+    
+}
+#infoBoxTextQuiz{
+    padding: 35px 40px;
+}
+.slideInQuiz {
+    position: fixed;
+    right: 0;
+    top: 0px;
+    width: 70vw;
+    height: 100vh;
+    background-color: #B4A5E1;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 200;
+}
+.slideInViewQuiz {
+    transform: translateX(0);
+}
+
+.OpacityOverLeftSideOnSlideInQuiz{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    z-index: 99;
+    background: #111;
+    cursor: pointer;
+}
+
+#infoBoxImgDiverse{
+    background-image: url("../img/Hangover.jpg");
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;
+    height: 50%;
+}
+
+.infoBoxEscBtnDiverse{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 30px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 15px;
+    padding-right: 15px;
+    
+}
+#infoBoxTextDiverse{
+    padding: 35px 40px;
+}
+.slideInDiverse {
+    position: fixed;
+    right: 0;
+    top: 0px;
+    width: 70vw;
+    height: 100vh;
+    background-color: #B4A5E1;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 200;
+}
+.slideInViewDiverse {
+    transform: translateX(0);
+}
+
+.OpacityOverLeftSideOnSlideInDiverse{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    z-index: 99;
+    background: #111;
+    cursor: pointer;
+}
 /*Nicklas*/
 
 .contentBoxesTop {
