@@ -47,7 +47,7 @@ h3{
     top: 0px;
     width: 70vw;
     height: 100vh;
-    background-color: #B4A5E1;
+    background-color: #f6f6f6;
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
     z-index: 200;
@@ -95,7 +95,7 @@ h3{
     top: 0px;
     width: 70vw;
     height: 100vh;
-    background-color: #8763F3;
+    background-color: #f6f6f6;
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
     z-index: 200;
@@ -144,7 +144,7 @@ h3{
     top: 0px;
     width: 70vw;
     height: 100vh;
-    background-color: #B4A5E1;
+    background-color: #f6f6f6;
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
     z-index: 200;
@@ -193,7 +193,7 @@ h3{
     top: 0px;
     width: 70vw;
     height: 100vh;
-    background-color: #B4A5E1;
+    background-color: #f6f6f6;
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
     z-index: 200;
@@ -216,15 +216,14 @@ h3{
 /*Nicklas*/
 
 .contentBoxesTop {
-
-
+    height: 35.3vh;
     margin-top: 20vh;
     padding: 5vh;
     box-shadow: 3px 3px 10px grey;
 }
 
 .contentBoxesBottom {
-
+    height: 35.3vh;
     margin-top: 5vh;
     padding: 5vh;
     box-shadow: 3px 3px 10px grey;
@@ -241,39 +240,47 @@ h3{
     background-image: url('../img/VRGlasses.jpg.jpg');
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: -3em;
 }
 
 .bgContentBoxImage2 {
     background-image: url('../img/TwoBeers.jpg');
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: -3em;
 }
 
 .bgContentBoxImage3 {
     background-image: url('../img/TwoHappyPeople.jpg');
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: -3em;
 }
 
 .bgContentBoxImage4 {
     background-image: url('../img/Hangover.jpg');
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: -3em;
 }
 
 .textSettings p {
 
-    font-size: 30px;
-    font-family: 'Allerta Stencil', sans-serif;
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
     margin: 0px 0px 10px 0px;
     text-align: center;
-    padding-top: 35px;
+    padding-top: 7vh;
     color: white;
     text-shadow: 2px 2px 4px #000000;
 }
 
 .textSettings p:first-letter {
-    font-size: 35px;
+    font-size: 55px;
     font-weight: bold;
     color: blue;
 }
@@ -283,7 +290,7 @@ h3{
 }
 
 .bookIcon{
-    width: 8% !important;
+    width: 7% !important;
 }
 
 .boxIcons {
@@ -321,8 +328,6 @@ a.wiggle-me:hover {
     -webkit-animation: wiggle .3s 2;
     animation: wiggle .3s 2;
 }
-
-
 
 /*Jakob*/
 
@@ -453,4 +458,7 @@ a.wiggle-me:hover {
     color: #FAD570;
 }
 
+#size .row{
+    max-width: 80em;
+}
 
