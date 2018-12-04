@@ -51,6 +51,24 @@ $(document).ready(function () {
             $("#opacityOverlayStory").removeClass("OpacityOverLeftSideOnSlideInStory");
         });
     });
+    
+    $(".slideInBtnQuiz, .infoBoxEscBtnQuiz").click(function () {
+        $("#slideInBoxQuiz").toggleClass("slideInViewQuiz");
+        $("#opacityOverlayQuiz").toggleClass("OpacityOverLeftSideOnSlideInQuiz");
+        $(".OpacityOverLeftSideOnSlideInQuiz").click(function () {
+            $("#slideInBoxQuiz").removeClass("slideInViewQuiz");
+            $("#opacityOverlayQuiz").removeClass("OpacityOverLeftSideOnSlideInQuiz");
+        });
+    });
+    
+    $(".slideInBtnDiverse, .infoBoxEscBtnDiverse").click(function () {
+        $("#slideInBoxDiverse").toggleClass("slideInViewDiverse");
+        $("#opacityOverlayDiverse").toggleClass("OpacityOverLeftSideOnSlideInDiverse");
+        $(".OpacityOverLeftSideOnSlideInDiverse").click(function () {
+            $("#slideInBoxDiverse").removeClass("slideInViewDiverse");
+            $("#opacityOverlayDiverse").removeClass("OpacityOverLeftSideOnSlideInDiverse");
+        });
+    });
     $(".clickToContinueBeer").click(function () {
         $(".introBox").slideUp("slow");
         $(".introHeadlineOpcaity").addClass("introHeadlineTransision");
