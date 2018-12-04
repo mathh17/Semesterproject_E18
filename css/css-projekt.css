@@ -19,6 +19,7 @@ h3{
 }
 
 /*Slide in Boxes*/
+/*Styling af Vr slide in box*/
 #infoBoxImgVR{
     background-image: url("../img/GuyHoldingVRGlasses.jpg");
     background-size:     cover;                      /* <------ */
@@ -67,6 +68,8 @@ h3{
     background: #111;
     cursor: pointer;
 }
+
+/*Styling af interaktic Historie slide in box*/
 #infoBoxImgStory{
     background-image: url("../img/Hangover.jpg");
     background-size:     cover;                      /* <------ */
@@ -116,6 +119,7 @@ h3{
     cursor: pointer;
 }
 
+/*Styling af Quiz slide in box*/
 #infoBoxImgQuiz{
     background-image: url("../img/Hangover.jpg");
     background-size:     cover;                      /* <------ */
@@ -165,6 +169,7 @@ h3{
     cursor: pointer;
 }
 
+/*Styling af diverse(dett med småt) slide in box*/
 #infoBoxImgDiverse{
     background-image: url("../img/Hangover.jpg");
     background-size:     cover;                      /* <------ */
