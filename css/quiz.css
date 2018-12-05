@@ -1,0 +1,30 @@
+.introHeadline {
+    font-family: 'Bungee Shade', cursive;
+    font-size: 4em;
+    letter-spacing: 2px;
+    color: #FAD570;
+    text-shadow: 1px 1px 1px #000000;
+    
+
+}
+
+
+.headlineLink{
+    color: #FAD570;
+    text-decoration: none;
+}
+
+.lowerText {
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
+    color: #FAD570;
+    text-shadow: 1px 1px 1px #000000;
+    word-spacing: 5px;
+}
+
+.introBigLetter {
+    font-size: 60px;
+}
+
+
