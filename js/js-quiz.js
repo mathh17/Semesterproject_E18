@@ -5,7 +5,8 @@
                 var a1 = 2;
                 var a2 = 3;
                 var a3 = 4;
-                var facit = 5;
+                var rigtigSvar = 5;
+                var facit = 6;
                 $.ajax({
                 	type: "GET",
                     url: "http://localhost:7000/read",
@@ -17,6 +18,7 @@
                         	console.log( i , arr[i]);
                              
                         }
+                        console.log(arr[2]);
                         loadQuestion();
                     },
                     error: function (data) {
@@ -32,20 +34,39 @@
                         $('#svar1').text(arr[a1]);
                         $('#svar2').text(arr[a2]);
                         $('#svar3').text(arr[a3]);
-                        $('#facit').text(arr[facit]);
+                        $('#facit').text(arr[rigtigSvar]);
                     
                 }
                            
                 function nextQuestion (){
-                    quest = quest + 6;
-                    a1 = a1 + 6;
-                    a2 = a2 + 6;
-                    a3 = a3 + 6;
-                    facit = facit +6;
+                    quest = quest + 7;
+                    a1 = a1 + 7;
+                    a2 = a2 + 7;
+                    a3 = a3 + 7;
+                    rigtigSvar = rigtigSvar + 7;
+                    facit = facit + 7;
                     loadQuestion();
                 }
                 
-                $('#svar1').click(function(){
+                function checkForAnswer (){
+                    
+                }
+     
+                $("#buttons button ").click(function(){
+                    var buttons = $("#buttons button");
+                    console.log(buttons);
+                        for(var i = 0; i < 4; i++){
+                            if(i == arr[facit] - 1){
+                                $(buttons[i]).addClass("rigtigSvar");
+                        }
+                            else{
+                                 $(buttons[i]).addClass("forkertSvar");
+                            }
+                    }
+                });
+                $('#svarTjekker').click(function(){
+                    $("#buttons button").removeClass("rigtigSvar forkertSvar")
+                    
                    nextQuestion(); 
                 });
                 

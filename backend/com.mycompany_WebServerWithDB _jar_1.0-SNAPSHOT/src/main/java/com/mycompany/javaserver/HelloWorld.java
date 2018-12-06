@@ -60,27 +60,29 @@ public class HelloWorld {
             statement = connection.createStatement();
 
             // Result set get the result of the SQL query
-            String selectText = "SELECT * FROM quiz.quiztable";
+            String selectText = "SELECT * FROM quiz.quiztable2";
             System.out.println(selectText);
             resultSet = statement.executeQuery(selectText);
             
 
             // Write result
             while (resultSet.next()) {
-                System.out.printf("%d | %s | %s | %s | %s | %s\n",
+                System.out.printf("%d | %s | %s | %s | %s | %s | %s\n",
                         resultSet.getInt("id"),
                         resultSet.getString("spørgsmål"),
                         resultSet.getString("svar1"),
                         resultSet.getString("svar2"),
                         resultSet.getString("svar3"),
-                        resultSet.getString("rigtig_svar")
+                        resultSet.getString("rigtig_svar"),
+                        resultSet.getString("facit")
                 );
                 textResult += resultSet.getInt("id") + "|"
                         + resultSet.getString("spørgsmål") + "|"
                         + resultSet.getString("svar1") + "|"
                         + resultSet.getString("svar2") + "|"
                         + resultSet.getString("svar3") + "|"
-                        + resultSet.getString("rigtig_svar") + "|";
+                        + resultSet.getString("rigtig_svar") + "|"
+                        + resultSet.getString("facit") + "|";
             }
         } catch (SQLException ex) {
             System.out.println("SQLException occurred! " + ex);
