@@ -7,17 +7,18 @@
 body {
   background: #efefef;
   color: #121221;
-  font: 700 14px/1 Montserrat, sans-serif;
+  font-family: 'Bangers';
   letter-spacing: 0.125em;
   text-align: center;
   text-transform: uppercase;
 }
 
 img{
-    border: 6px solid #7cf07f;
+    border: 6px solid black;
     width: 67vw;
 }
 .introHeadline {
+    margin-bottom: 4vh;
     font-family: 'Bungee Shade', cursive;
     font-size: 4em;
     letter-spacing: 2px;
@@ -32,6 +33,9 @@ img{
     text-decoration: none;
 }
 
+button{
+    width: 100%;
+}
 
 .btn {
   background: none;
