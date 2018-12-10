@@ -141,6 +141,8 @@ h3{
 }
 #infoBoxTextQuiz{
     padding: 35px 40px;
+    background-color: #80BFFF;
+    height: 50%;
 }
 .slideInQuiz {
     position: fixed;
@@ -467,3 +469,8 @@ a.wiggle-me:hover {
     max-width: 80em;
 }
 
+.quizLink{
+    color: black;
+    text-decoration-line: underline;
+    text-decoration-color: black;
+}
