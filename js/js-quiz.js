@@ -58,14 +58,17 @@
                         for(var i = 0; i < 4; i++){
                             if(i == arr[facit] - 1){
                                 $(buttons[i]).addClass("rigtigSvar");
+                                $("#facitRow").addClass("svarShow");
                         }
                             else{
                                  $(buttons[i]).addClass("forkertSvar");
+                                $("#facitRow").addClass("svarShow");
                             }
                     }
                 });
                 $('#svarTjekker').click(function(){
-                    $("#buttons button").removeClass("rigtigSvar forkertSvar")
+                    $("#buttons button").removeClass("rigtigSvar forkertSvar");
+                    $("#facitRow").removeClass("svarShow");
                     
                    nextQuestion(); 
                 });

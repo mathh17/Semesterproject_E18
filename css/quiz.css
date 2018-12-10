@@ -35,6 +35,36 @@
     background-color: lawngreen;
 }
 
+#question{
+    margin-bottom: 5%;
+    padding: 2%;
+    font-size: 2em;
+}
+
+#facit{
+    margin-bottom: 5%;
+    padding: 2%;
+    font-size: 2em;
+    font-family: 'Bangers';
+}
+
+.quizBox{
+    margin-top: 10%;
+    margin-right: 8%;
+    margin-left: 8%;
+}
+
+.svarHide{
+    visibility: hidden;
+}
+.svarShow{
+    visibility: visible;
+}
+
+.svarBox{
+    height: 5em;
+    outline-style: hidden;
+}
 
 .forkertSvar,
 .forkertSvar:hover,
