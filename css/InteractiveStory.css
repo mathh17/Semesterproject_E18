@@ -5,7 +5,7 @@
 
 
 body {
-  background: #efefef;
+  background: #88AB75;
   color: #121221;
   font-family: 'Bangers';
   letter-spacing: 0.125em;
@@ -14,7 +14,7 @@ body {
 }
 
 img{
-    border: 6px solid black;
+    /*border: 6px solid black;*/
     width: 67vw;
 }
 .introHeadline {

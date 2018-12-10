@@ -12,6 +12,7 @@
 
 h1{
     margin: 0px 0px 5px 0px;
+    color: #FAD570;
 }
 h3{
     margin: 0px 0px 35px 0px;
@@ -91,6 +92,8 @@ h3{
 }
 #infoBoxTextStory{
     padding: 35px 40px;
+    background-color: #88AB75;
+    height: 60%;    
 }
 .slideInStory {
     position: fixed;
