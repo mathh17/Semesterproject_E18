@@ -3,13 +3,13 @@ class Dilemma {
         this.antalSvarMuligheder = antalSvarMuligheder;
         this.sceneBilleder = billedLokation;
         this.svarBilleder = svarBilleder;
-        this.billeder = [''];
     }
 }
 
 $(document).ready(function () {
 
     $("#valgBtn3, #valgBtn2").hide();
+    $("#prøvIgenOgFremadBtn").hide();
     let dilemma1 = new Dilemma(3, ['../dilemmaer/intro/INTROHISTORIE_JPG.jpg', '../dilemmaer/intro/INTROHISTORIE2_JPG.jpg', '../dilemmaer/intro/INTROHISTORIE3_JPG.jpg', '../dilemmaer/intro/INTROHISTORIE4_JPG.jpg'], ['../dilemmaer/dilemma1/DILEMMA1_SVAR_1_JPG.jpg', '../dilemmaer/dilemma1/DILEMMA1_SVAR_2_JPG.jpg', '../dilemmaer/dilemma1/DILEMMA1_SVAR_3_JPG.jpg']);
     let dilemma2 = new Dilemma(3, ['../dilemmaer/dilemma1/DILEMMA1_JPG.jpg', '../dilemmaer/dilemma1/DILEMMA1.1_JPG.jpg', '../dilemmaer/dilemma1/DILEMMA1.2_JPG.jpg'], ['../dilemmaer/dilemma1/DILEMMA1_SVAR_1_JPG.jpg', '../dilemmaer/dilemma1/DILEMMA1_SVAR_2_JPG.jpg', '../dilemmaer/dilemma1/DILEMMA1_SVAR_3_JPG.jpg']);
     let dilemma3 = new Dilemma(3, ['../dilemmaer/dilemma1/DILEMMA1_JPG.jpg', '../dilemmaer/dilemma1/DILEMMA1.1_JPG.jpg', '../dilemmaer/dilemma1/DILEMMA1.2_JPG.jpg'], ['../dilemmaer/dilemma1/DILEMMA1_SVAR_1_JPG.jpg', '../dilemmaer/dilemma1/DILEMMA1_SVAR_2_JPG.jpg']);
@@ -17,12 +17,11 @@ $(document).ready(function () {
     let dilemma5 = new Dilemma(3, ['../dilemmaer/dilemma1/INTROHISTORIE_JPG.jpg', '../dilemmaer/dilemma1/INTROHISTORIE2_JPG.jpg', '../dilemmaer/dilemma1/INTROHISTORIE3_JPG.jpg', '../dilemmaer/dilemma1/INTROHISTORIE4_JPG.jpg'], ['../dilemmaer/dilemma1/DILEMMA1_SVAR_1_JPG.jpg', '../dilemmaer/dilemma1/DILEMMA1_SVAR_2_JPG.jpg', '../dilemmaer/dilemma1/DILEMMA1_SVAR_3_JPG.jpg']);
     var dilemmaPosition = 0;
     var scenePosition = 0;
-    var dilemmaPosition = 1;
+    var dilemmaPosition = 0;
 
 
 
     var dilemmaer = [dilemma1, dilemma2, dilemma3, dilemma4, dilemma5]
-    console.log(dilemma1.billeder[0]);
     /* $('#canvas').css('background-image', 'url(' + dilemmaer[0].billedLokation[0] + ')');*/
     BuildDilemma(dilemmaer[dilemmaPosition]);
 
@@ -32,15 +31,16 @@ $(document).ready(function () {
             dilemmaPosition++;
             AktiverFremTilbageKnapper();
             BuildDilemma(dilemmaer[dilemmaPosition]);
+            $("#prøvIgenOgFremadBtn").hide();
         }
     });
 
     $("#forrigeDilemma").click(function () {
         if (dilemmaPosition > 0) {
             scenePosition = 0;
-            dilemmaPosition--;
             AktiverFremTilbageKnapper();
             BuildDilemma(dilemmaer[dilemmaPosition]);
+            $("#prøvIgenOgFremadBtn").hide();
         }
     });
 
@@ -58,14 +58,17 @@ $(document).ready(function () {
         //her findes index af knappen
         var valgtNummer = $("#valgBtn3 button, #valgBtn2 button").index(this);
         //Hvis der kun er 2 valg, trækkes tre fra index fordi den tæller de tre første knapper og derfor får index
-        if(valgtNummer>2){
+        if (valgtNummer > 2) {
             valgtNummer -= 3;
         }
+        $("#prøvIgenOgFremadBtn").show();
+        $("#valgBtn3, valgBtn2").hide();
         $("img").attr("src", dilemmaer[dilemmaPosition].svarBilleder[valgtNummer]);
+        
+    
+        
+        
     });
-
-
-
 
 
     //Bygger dilemmaerne når der kligges på forrige dilemma og næste dilemma knapper
