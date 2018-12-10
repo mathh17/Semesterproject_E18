@@ -60,7 +60,7 @@ public class HelloWorld {
             statement = connection.createStatement();
 
             // Result set get the result of the SQL query
-            String selectText = "SELECT * FROM quiz.quiztable2";
+            String selectText = "SELECT * FROM quiz.quiztable";
             System.out.println(selectText);
             resultSet = statement.executeQuery(selectText);
             
