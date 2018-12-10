@@ -62,18 +62,26 @@ $(document).ready(function () {
             valgtNummer -= 3;
         }
         $("#prøvIgenOgFremadBtn").show();
-        $("#valgBtn3, valgBtn2").hide();
-        $("img").attr("src", dilemmaer[dilemmaPosition].svarBilleder[valgtNummer]);
-        
-    
-        
-        
+        $("#valgBtn3, #valgBtn2").hide();
+        changePicture(dilemmaer[dilemmaPosition].svarBilleder[valgtNummer]);   
     });
 
+    
+    function changePicture(billede)
+    {
+        
+        $("button").fadeOut(100);
+        $("img").slideUp("fast",function(){
+           $("img").attr("src", billede);
+            $("img").slideDown();
+            $("button").fadeIn();
+        })
+        
+    }
 
     //Bygger dilemmaerne når der kligges på forrige dilemma og næste dilemma knapper
     function BuildDilemma(dilemma) {
-        $("img").attr("src", dilemma.sceneBilleder[0]);
+        changePicture(dilemma.sceneBilleder[0]);
     }
 
     //Shower Valg knapper og Hider frem/tilbage knapper
@@ -103,7 +111,7 @@ $(document).ready(function () {
         //Skifter scenen indtil du er på sidste billede i historie arrayet. Det sidste billede er billedet med forskellige svar.
         if (scenePosition < dilemmaer[dilemmaPosition].sceneBilleder.length - 1) {
             scenePosition++;
-            $("img").attr("src", dilemmaer[dilemmaPosition].sceneBilleder[scenePosition]);
+            changePicture(dilemmaer[dilemmaPosition].sceneBilleder[scenePosition]);
         } else
             scenePosition++;
         console.log(dilemmaer[dilemmaPosition].sceneBilleder.length + " og " + scenePosition);
@@ -111,14 +119,14 @@ $(document).ready(function () {
         // her rammer vi billedet med svar på og aktiverer altså Valg Knapperne 
         if (scenePosition == dilemmaer[dilemmaPosition].sceneBilleder.length - 1) {
             AktiverValgKnapper();
-            $("img").attr("src", dilemmaer[dilemmaPosition].sceneBilleder[scenePosition]);
+            changePicture(dilemmaer[dilemmaPosition].sceneBilleder[scenePosition]);
         }
     }
 
     function ForrigeScene() {
         if (scenePosition < dilemmaer[dilemmaPosition].sceneBilleder.length) {
             scenePosition--;
-            $("img").attr("src", dilemmaer[dilemmaPosition].sceneBilleder[scenePosition]);
+            changePicture(dilemmaer[dilemmaPosition].sceneBilleder[scenePosition]);
         }
     }
 
