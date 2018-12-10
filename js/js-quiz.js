@@ -14,11 +14,12 @@
                         //console.log(data);
                         // Possible use of the data
                         arr = data.substr(8).split('|'); // cut first 8 char, then convert to array of strings, using '|' as separator
+                        arr.push("Tak fordi du tog vores quiz!")
                          for (var i=0;i<arr.length;i++){
                         	console.log( i , arr[i]);
                              
                         }
-                        console.log(arr[2]);
+                        console.log(arr[70]);
                         loadQuestion();
                     },
                     error: function (data) {
@@ -28,14 +29,11 @@
                 });
                 
                 function loadQuestion (){
-                
-                    
                         $('#question').text(arr[quest]);
                         $('#svar1').text(arr[a1]);
                         $('#svar2').text(arr[a2]);
                         $('#svar3').text(arr[a3]);
                         $('#facit').text(arr[rigtigSvar]);
-                    
                 }
                            
                 function nextQuestion (){
@@ -45,32 +43,43 @@
                     a3 = a3 + 7;
                     rigtigSvar = rigtigSvar + 7;
                     facit = facit + 7;
+                    console.log(quest);
                     loadQuestion();
+                  
                 }
-                
-                function checkForAnswer (){
-                    
-                }
-     
+                /*function isGameDone(){
+                    if(quest = 36){
+                        return true;
+                    }
+                }*/
                 $("#buttons button ").click(function(){
                     var buttons = $("#buttons button");
-                    console.log(buttons);
+                    if(quest != 36){
                         for(var i = 0; i < 4; i++){
                             if(i == arr[facit] - 1){
                                 $(buttons[i]).addClass("rigtigSvar");
                                 $("#facitRow").addClass("svarShow");
+                                $("#svarTjekker").addClass("svarShow");
                         }
                             else{
                                  $(buttons[i]).addClass("forkertSvar");
                                 $("#facitRow").addClass("svarShow");
+                                $("#svarTjekker").addClass("svarShow");
                             }
                     }
+                        
+                }
+                    else{
+                            $(buttons[i]).addClass("rigtigSvar");
+                            $("#facitRow").addClass("svarShow");
+                            $("#svarTjekker").addClass("svarHide");
+                        }
                 });
                 $('#svarTjekker').click(function(){
                     $("#buttons button").removeClass("rigtigSvar forkertSvar");
                     $("#facitRow").removeClass("svarShow");
-                    
-                   nextQuestion(); 
+                    $("#svarTjekker").removeClass("svarShow");
+                    nextQuestion();
                 });
                 
             });
