@@ -37,8 +37,13 @@
         <div id="facitRow" class="row svarHide">
         <div id="facit" class="large-12 text-center columns text-center facit"></div>
             </div>
+            <div class="row">
+            <div id="tak" class="large-12 columns text-center tak endMessage">Tak fordi du tog quizzen!</div>
+            </div>
         <div class="row">
-        <button id="svarTjekker" class="large-4 large-offset-4 text-center columns text-center svarHide">Næste Spørgsmål!</button>
+        <button id="endButton" class="large-4 text-center columns endMessage" onClick="history.go(0)" VALUE="Refresh">Tag quizzen igen!</button>
+        <button id="svarTjekker" class="large-4 columns text-center svarHide">Næste Spørgsmål!</button>
+        <button id="endButton" class="large-4 columns text-center endMessage">Tilbage til forsiden!</button>
             </div>
         </div>
     </body>
