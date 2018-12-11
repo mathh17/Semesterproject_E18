@@ -11,12 +11,12 @@
 
 
 h1{
-    margin: 0px 0px 5px 0px;
+    margin: 0px 0px 5% 0px;
     color: #FAD570;
 }
 h3{
     margin: 0px 0px 35px 0px;
-    color: gray;
+    color: #7D7C84;
 }
 
 /*Slide in Boxes*/
@@ -39,6 +39,9 @@ h3{
     padding-left: 15px;
     padding-right: 15px;
     
+}
+.infoBoxEscBtnVR span{
+    color: 
 }
 #infoBoxTextVR{
     padding: 35px 40px;
@@ -94,6 +97,9 @@ h3{
     padding: 35px 40px;
     background-color: #88AB75;
     height: 60%;    
+}
+#firstLetterStory{
+color: #88AB75 !important;
 }
 .slideInStory {
     position: fixed;

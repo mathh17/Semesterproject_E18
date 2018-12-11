@@ -10,12 +10,13 @@ body {
   font-family: 'Bangers';
   letter-spacing: 0.125em;
   text-align: center;
+    font-size:1.3em; 
   text-transform: uppercase;
 }
 
 img{
-    /*border: 6px solid black;*/
-    width: 67vw;
+    border: 4px solid darkgreen;
+    /*width: 74vw;*/
 }
 .introHeadline {
     margin-bottom: 4vh;
@@ -43,7 +44,7 @@ button{
   border-bottom-width: 4px;
   font: inherit;
   letter-spacing: inherit;
-  margin: 1em;
+  margin-top    : 1em;
   padding: 1em 2em;
   text-transform: inherit;
   transition: color 1s;
