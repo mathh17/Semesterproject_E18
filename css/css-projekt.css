@@ -10,9 +10,10 @@
 }
 
 
-h1{
+h1, h1>a{
     margin: 0px 0px 3% 0px;
     color: #FAD570;
+    
 }
 h3{
     margin: 0px 0px 35px 0px;
@@ -488,7 +489,7 @@ a.wiggle-me:hover {
 }
 
 .quizLink{
-    color: black;
-    text-decoration-line: underline;
-    text-decoration-color: black;
+    /*color: black;*/
+   
+    /*text-decoration-color: black;*/
 }
