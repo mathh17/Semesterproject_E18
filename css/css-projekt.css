@@ -75,7 +75,7 @@ h3{
 
 /*Styling af interaktic Historie slide in box*/
 #infoBoxImgStory{
-    background-image: url("../img/Hangover.jpg");
+    background-image: url("../img/intro_jpg.jpg");
     background-size:     cover;                      /* <------ */
     background-repeat:   no-repeat;
     background-position: center center;
@@ -188,11 +188,12 @@ color: #88AB75 !important;
 
 /*Styling af diverse(dett med småt) slide in box*/
 #infoBoxImgDiverse{
-    background-image: url("../img/Hangover.jpg");
+    background-image: url("../img/blur-boy-character-209679.jpg");
     background-size:     cover;                      /* <------ */
     background-repeat:   no-repeat;
     background-position: center center;
     height: 50%;
+    
 }
 
 .infoBoxEscBtnDiverse{
@@ -208,6 +209,8 @@ color: #88AB75 !important;
 }
 #infoBoxTextDiverse{
     padding: 35px 40px;
+    background-color: #967A;
+    height: 50%;
 }
 .slideInDiverse {
     position: fixed;
@@ -267,7 +270,7 @@ color: #88AB75 !important;
 }
 
 .bgContentBoxImage2 {
-    background-image: url('../img/TwoBeers.jpg');
+    background-image: url('../img/DILEMMA2.2_jpg.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -275,7 +278,7 @@ color: #88AB75 !important;
 }
 
 .bgContentBoxImage3 {
-    background-image: url('../img/TwoHappyPeople.jpg');
+    background-image: url('../img/analysis-blackboard-board-355952.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -283,7 +286,7 @@ color: #88AB75 !important;
 }
 
 .bgContentBoxImage4 {
-    background-image: url('../img/Hangover.jpg');
+    background-image: url('../img/baby-beautiful-child-1257105.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
