@@ -19,15 +19,16 @@ img{
     width: 70%;
 }
 .introHeadline {
-    margin-bottom: 4vh;
+    margin-bottom: 2vh;
     font-family: 'Bungee Shade', cursive;
-    font-size: 4em;
+    font-size: 3em;
     letter-spacing: 2px;
     color: #FAD570;
     text-shadow: 1px 1px 1px #000000;
     
 
 }
+
 
 .headlineLink{
     color: #FAD570;

@@ -9,22 +9,21 @@ $(document).ready(function () {
 
     $("#valgBtn3, #valgBtn2").hide();
     $("#prøvIgenOgFremadBtn").hide();
+    $("#prøvForFraBtn").hide();
     let dilemma1 = new Dilemma(['../dilemmaer/Dilemma1/INTRO_JPG.jpg','../dilemmaer/Dilemma1/INTROHISTORIE_JPG.jpg','../dilemmaer/Dilemma1/INTROHISTORIE2_JPG.jpg','../dilemmaer/Dilemma1/INTROHISTORIE3_JPG.jpg','../dilemmaer/Dilemma1/INTROHISTORIE4_JPG.jpg','../dilemmaer/Dilemma1/DILEMMA1_JPG.jpg','../dilemmaer/Dilemma1/DILEMMA1.1_JPG.jpg','../dilemmaer/Dilemma1/DILEMMA1.2_JPG.jpg'],['../dilemmaer/Dilemma1/DILEMMA1_SVAR_1_JPG.jpg','../dilemmaer/Dilemma1/DILEMMA1_SVAR_2_JPG.jpg','../dilemmaer/Dilemma1/DILEMMA1_SVAR_3_JPG.jpg']);
     
     
     let dilemma2 = new Dilemma(['../dilemmaer/dilemma2/DILEMMA2_intro_JPG.jpg','../dilemmaer/dilemma2/DILEMMA2.2_JPG.jpg'], ['../dilemmaer/dilemma2/DILEMMA2._SVAR1_JPG.jpg','../dilemmaer/dilemma2/DILEMMA2._SVAR2_JPG.jpg','../dilemmaer/dilemma2/DILEMMA2._SVAR3_JPG.jpg']);
     
-    let dilemma3 = new Dilemma(['../dilemmaer/dilemma1/DILEMMA1_JPG.jpg', '../dilemmaer/dilemma1/DILEMMA1.1_JPG.jpg', '../dilemmaer/dilemma1/DILEMMA1.2_JPG.jpg'], ['../dilemmaer/dilemma1/DILEMMA1_SVAR_1_JPG.jpg', '../dilemmaer/dilemma1/DILEMMA1_SVAR_2_JPG.jpg']);
+    let dilemma3 = new Dilemma(['../dilemmaer/dilemma3/DILEMMA3_intro_JPG.jpg', '../dilemmaer/dilemma3/DILEMMA3.2_JPG.jpg'], ['../dilemmaer/dilemma3/DILEMMA3_SVAR1_JPG.jpg', '../dilemmaer/dilemma3/DILEMMA3_SVAR2_JPG.jpg','../dilemmaer/dilemma3/DILEMMA3_SVAR3_JPG1.jpg']);
     
-    let dilemma4 = new Dilemma(['../dilemmaer/dilemma1/INTROHISTORIE_JPG.jpg', '../dilemmaer/dilemma1/INTROHISTORIE2_JPG.jpg', '../dilemmaer/dilemma1/INTROHISTORIE3_JPG.jpg', '../dilemmaer/dilemma1/INTROHISTORIE4_JPG.jpg'], ['../dilemmaer/dilemma1/DILEMMA1_SVAR_1_JPG.jpg', '../dilemmaer/dilemma1/DILEMMA1_SVAR_2_JPG.jpg', '../dilemmaer/dilemma1/DILEMMA1_SVAR_3_JPG.jpg']);
+    let dilemma4 = new Dilemma(['../dilemmaer/dilemma1/INTROHISTORIE_JPG.jpg', '../dilemmaer/dilemma1/INTROHISTORIE2_JPG.jpg', '../dilemmaer/dilemma1/INTROHISTORIE3_JPG.jpg', '../dilemmaer/dilemma1/INTROHISTORIE4_JPG.jpg'],[""]);
     
     let dilemma5 = new Dilemma(['../dilemmaer/dilemma1/INTROHISTORIE_JPG.jpg', '../dilemmaer/dilemma1/INTROHISTORIE2_JPG.jpg', '../dilemmaer/dilemma1/INTROHISTORIE3_JPG.jpg', '../dilemmaer/dilemma1/INTROHISTORIE4_JPG.jpg'], ['../dilemmaer/dilemma1/DILEMMA1_SVAR_1_JPG.jpg', '../dilemmaer/dilemma1/DILEMMA1_SVAR_2_JPG.jpg', '../dilemmaer/dilemma1/DILEMMA1_SVAR_3_JPG.jpg']);
     
     var dilemmaPosition = 0;
     var scenePosition = 0;
     var dilemmaPosition = 0;
-
-
 
     var dilemmaer = [dilemma1, dilemma2, dilemma3, dilemma4, dilemma5]
     /* $('#canvas').css('background-image', 'url(' + dilemmaer[0].billedLokation[0] + ')');*/
@@ -71,17 +70,14 @@ $(document).ready(function () {
         changePicture(dilemmaer[dilemmaPosition].svarBilleder[valgtNummer]);   
     });
 
-    
     function changePicture(billede)
     {
-        
         $("button").fadeOut(100);
         $("img").slideUp("fast",function(){
            $("img").attr("src", billede);
             $("img").slideDown();
             $("button").fadeIn();
-        })
-        
+        })    
     }
 
     //Bygger dilemmaerne når der kligges på forrige dilemma og næste dilemma knapper
@@ -121,10 +117,15 @@ $(document).ready(function () {
             scenePosition++;
         console.log(dilemmaer[dilemmaPosition].sceneBilleder.length + " og " + scenePosition);
 
+        console.log(dilemmaer[dilemmaPosition].svarBilleder);
         // her rammer vi billedet med svar på og aktiverer altså Valg Knapperne 
-        if (scenePosition == dilemmaer[dilemmaPosition].sceneBilleder.length - 1) {
+        if (scenePosition == dilemmaer[dilemmaPosition].sceneBilleder.length - 1 &&  dilemmaer[dilemmaPosition].svarBilleder[0] != "") {
             AktiverValgKnapper();
             changePicture(dilemmaer[dilemmaPosition].sceneBilleder[scenePosition]);
+        }else if(scenePosition == dilemmaer[dilemmaPosition].sceneBilleder.length - 1 && dilemmaer[dilemmaPosition].svarBilleder[0] == ""){
+            $("#prøvForFraBtn").show();
+            $("#buttons").hide();
+            
         }
     }
 
@@ -134,8 +135,4 @@ $(document).ready(function () {
             changePicture(dilemmaer[dilemmaPosition].sceneBilleder[scenePosition]);
         }
     }
-
-
-
-
 })
