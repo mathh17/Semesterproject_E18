@@ -1,6 +1,5 @@
 class Dilemma {
-    constructor(antalSvarMuligheder, billedLokation, svarBilleder) {
-        this.antalSvarMuligheder = antalSvarMuligheder;
+    constructor(billedLokation, svarBilleder) {
         this.sceneBilleder = billedLokation;
         this.svarBilleder = svarBilleder;
     }
@@ -10,11 +9,17 @@ $(document).ready(function () {
 
     $("#valgBtn3, #valgBtn2").hide();
     $("#prøvIgenOgFremadBtn").hide();
-    let dilemma1 = new Dilemma(3, ['../dilemmaer/intro/INTROHISTORIE_JPG.jpg', '../dilemmaer/intro/INTROHISTORIE2_JPG.jpg', '../dilemmaer/intro/INTROHISTORIE3_JPG.jpg', '../dilemmaer/intro/INTROHISTORIE4_JPG.jpg'], ['../dilemmaer/dilemma1/DILEMMA1_SVAR_1_JPG.jpg', '../dilemmaer/dilemma1/DILEMMA1_SVAR_2_JPG.jpg', '../dilemmaer/dilemma1/DILEMMA1_SVAR_3_JPG.jpg']);
-    let dilemma2 = new Dilemma(3, ['../dilemmaer/dilemma1/DILEMMA1_JPG.jpg', '../dilemmaer/dilemma1/DILEMMA1.1_JPG.jpg', '../dilemmaer/dilemma1/DILEMMA1.2_JPG.jpg'], ['../dilemmaer/dilemma1/DILEMMA1_SVAR_1_JPG.jpg', '../dilemmaer/dilemma1/DILEMMA1_SVAR_2_JPG.jpg', '../dilemmaer/dilemma1/DILEMMA1_SVAR_3_JPG.jpg']);
-    let dilemma3 = new Dilemma(3, ['../dilemmaer/dilemma1/DILEMMA1_JPG.jpg', '../dilemmaer/dilemma1/DILEMMA1.1_JPG.jpg', '../dilemmaer/dilemma1/DILEMMA1.2_JPG.jpg'], ['../dilemmaer/dilemma1/DILEMMA1_SVAR_1_JPG.jpg', '../dilemmaer/dilemma1/DILEMMA1_SVAR_2_JPG.jpg']);
-    let dilemma4 = new Dilemma(3, ['../dilemmaer/dilemma1/INTROHISTORIE_JPG.jpg', '../dilemmaer/dilemma1/INTROHISTORIE2_JPG.jpg', '../dilemmaer/dilemma1/INTROHISTORIE3_JPG.jpg', '../dilemmaer/dilemma1/INTROHISTORIE4_JPG.jpg'], ['../dilemmaer/dilemma1/DILEMMA1_SVAR_1_JPG.jpg', '../dilemmaer/dilemma1/DILEMMA1_SVAR_2_JPG.jpg', '../dilemmaer/dilemma1/DILEMMA1_SVAR_3_JPG.jpg']);
-    let dilemma5 = new Dilemma(3, ['../dilemmaer/dilemma1/INTROHISTORIE_JPG.jpg', '../dilemmaer/dilemma1/INTROHISTORIE2_JPG.jpg', '../dilemmaer/dilemma1/INTROHISTORIE3_JPG.jpg', '../dilemmaer/dilemma1/INTROHISTORIE4_JPG.jpg'], ['../dilemmaer/dilemma1/DILEMMA1_SVAR_1_JPG.jpg', '../dilemmaer/dilemma1/DILEMMA1_SVAR_2_JPG.jpg', '../dilemmaer/dilemma1/DILEMMA1_SVAR_3_JPG.jpg']);
+    let dilemma1 = new Dilemma(['../dilemmaer/Dilemma1/INTRO_JPG.jpg','../dilemmaer/Dilemma1/INTROHISTORIE_JPG.jpg','../dilemmaer/Dilemma1/INTROHISTORIE2_JPG.jpg','../dilemmaer/Dilemma1/INTROHISTORIE3_JPG.jpg','../dilemmaer/Dilemma1/INTROHISTORIE4_JPG.jpg','../dilemmaer/Dilemma1/DILEMMA1_JPG.jpg','../dilemmaer/Dilemma1/DILEMMA1.1_JPG.jpg','../dilemmaer/Dilemma1/DILEMMA1.2_JPG.jpg'],['../dilemmaer/Dilemma1/DILEMMA1_SVAR_1_JPG.jpg','../dilemmaer/Dilemma1/DILEMMA1_SVAR_2_JPG.jpg','../dilemmaer/Dilemma1/DILEMMA1_SVAR_3_JPG.jpg']);
+    
+    
+    let dilemma2 = new Dilemma(['../dilemmaer/dilemma2/DILEMMA2_intro_JPG.jpg','../dilemmaer/dilemma2/DILEMMA2.2_JPG.jpg'], ['../dilemmaer/dilemma2/DILEMMA2._SVAR1_JPG.jpg','../dilemmaer/dilemma2/DILEMMA2._SVAR2_JPG.jpg','../dilemmaer/dilemma2/DILEMMA2._SVAR3_JPG.jpg']);
+    
+    let dilemma3 = new Dilemma(['../dilemmaer/dilemma1/DILEMMA1_JPG.jpg', '../dilemmaer/dilemma1/DILEMMA1.1_JPG.jpg', '../dilemmaer/dilemma1/DILEMMA1.2_JPG.jpg'], ['../dilemmaer/dilemma1/DILEMMA1_SVAR_1_JPG.jpg', '../dilemmaer/dilemma1/DILEMMA1_SVAR_2_JPG.jpg']);
+    
+    let dilemma4 = new Dilemma(['../dilemmaer/dilemma1/INTROHISTORIE_JPG.jpg', '../dilemmaer/dilemma1/INTROHISTORIE2_JPG.jpg', '../dilemmaer/dilemma1/INTROHISTORIE3_JPG.jpg', '../dilemmaer/dilemma1/INTROHISTORIE4_JPG.jpg'], ['../dilemmaer/dilemma1/DILEMMA1_SVAR_1_JPG.jpg', '../dilemmaer/dilemma1/DILEMMA1_SVAR_2_JPG.jpg', '../dilemmaer/dilemma1/DILEMMA1_SVAR_3_JPG.jpg']);
+    
+    let dilemma5 = new Dilemma(['../dilemmaer/dilemma1/INTROHISTORIE_JPG.jpg', '../dilemmaer/dilemma1/INTROHISTORIE2_JPG.jpg', '../dilemmaer/dilemma1/INTROHISTORIE3_JPG.jpg', '../dilemmaer/dilemma1/INTROHISTORIE4_JPG.jpg'], ['../dilemmaer/dilemma1/DILEMMA1_SVAR_1_JPG.jpg', '../dilemmaer/dilemma1/DILEMMA1_SVAR_2_JPG.jpg', '../dilemmaer/dilemma1/DILEMMA1_SVAR_3_JPG.jpg']);
+    
     var dilemmaPosition = 0;
     var scenePosition = 0;
     var dilemmaPosition = 0;
