@@ -47,33 +47,46 @@
                     loadQuestion();
                   
                 }
-                /*function isGameDone(){
-                    if(quest = 36){
-                        return true;
-                    }
-                }*/
-                $("#buttons button ").click(function(){
-                    var buttons = $("#buttons button");
-                    if(quest != 36){
-                        for(var i = 0; i < 4; i++){
-                            if(i == arr[facit] - 1){
+                function gameDone(){
+                    for(var i = 0; i < 4; i++){
+                            if(i == arr[41]-1){
                                 $(buttons[i]).addClass("rigtigSvar");
                                 $("#facitRow").addClass("svarShow");
-                                $("#svarTjekker").addClass("svarShow");
                         }
                             else{
                                  $(buttons[i]).addClass("forkertSvar");
                                 $("#facitRow").addClass("svarShow");
-                                $("#svarTjekker").addClass("svarShow");
+                            }
+                    }
+                   
+                    nextQuestion();
+                }
+                $("#buttons button ").click(function(){
+                    var buttons = $("#buttons button");
+                    if(quest <= 43){
+                        for(var i = 0; i < 4; i++){
+                            if(i == arr[facit] - 1){
+                                $(buttons[i]).addClass("rigtigSvar");
+                                $("#facitRow").addClass("svarShow");
+                                
+                        }
+                            else{
+                                 $(buttons[i]).addClass("forkertSvar");
+                                $("#facitRow").addClass("svarShow");
+                                
                             }
                     }
                         
                 }
                     else{
-                            $(buttons[i]).addClass("rigtigSvar");
-                            $("#facitRow").addClass("svarShow");
-                            $("#svarTjekker").addClass("svarHide");
+                         $("#tak").removeClass("endMessage");
+                         $("#endButton").removeClass("endMessage");
+                            nextQuestion();
+                            gameDone()
                         }
+                    if(quest < 35){
+                        $("#svarTjekker").addClass("svarShow");
+                    }
                 });
                 $('#svarTjekker').click(function(){
                     $("#buttons button").removeClass("rigtigSvar forkertSvar");
