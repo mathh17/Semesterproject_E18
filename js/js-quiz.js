@@ -47,23 +47,10 @@
                     loadQuestion();
                   
                 }
-                function gameDone(){
-                    for(var i = 0; i < 4; i++){
-                            if(i == arr[41]-1){
-                                $(buttons[i]).addClass("rigtigSvar");
-                                $("#facitRow").addClass("svarShow");
-                        }
-                            else{
-                                 $(buttons[i]).addClass("forkertSvar");
-                                $("#facitRow").addClass("svarShow");
-                            }
-                    }
-                   
-                    nextQuestion();
-                }
+                                                        
                 $("#buttons button ").click(function(){
                     var buttons = $("#buttons button");
-                    if(quest <= 43){
+                    if(quest < 35){
                         for(var i = 0; i < 4; i++){
                             if(i == arr[facit] - 1){
                                 $(buttons[i]).addClass("rigtigSvar");
@@ -73,16 +60,24 @@
                             else{
                                  $(buttons[i]).addClass("forkertSvar");
                                 $("#facitRow").addClass("svarShow");
-                                
                             }
                     }
                         
                 }
                     else{
-                         $("#tak").removeClass("endMessage");
-                         $("#endButton").removeClass("endMessage");
-                            nextQuestion();
-                            gameDone()
+                        $(".endMessage").removeClass("endMessage");
+                        $("#facitRow").addClass("svarShow");
+                       
+                        
+                         var buttons = $("#buttons button");
+                        for(var i = 0; i < 4; i++){
+                            if(i == arr[facit]-1){
+                                $(buttons[i]).addClass("rigtigSvar");
+                                }
+                            else{
+                                 $(buttons[i]).addClass("forkertSvar");
+                                }
+                            }
                         }
                     if(quest < 35){
                         $("#svarTjekker").addClass("svarShow");
