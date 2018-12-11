@@ -187,6 +187,7 @@ color: #88AB75 !important;
     background-repeat:   no-repeat;
     background-position: center center;
     height: 50%;
+    
 }
 
 .infoBoxEscBtnDiverse{
@@ -202,6 +203,8 @@ color: #88AB75 !important;
 }
 #infoBoxTextDiverse{
     padding: 35px 40px;
+    background-color: #967AF0;
+    height: 50%;
 }
 .slideInDiverse {
     position: fixed;
