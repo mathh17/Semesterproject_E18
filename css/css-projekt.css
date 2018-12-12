@@ -459,6 +459,7 @@ a.wiggle-me:hover {
 }
 
 .beerimg {
+    cursor: pointer;
     position: absolute;
     top: 80%;
     left: 50%;
