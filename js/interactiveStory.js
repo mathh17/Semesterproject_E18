@@ -23,7 +23,7 @@ $(document).ready(function () {
     let dilemma6 = new Dilemma(['../dilemmaer/dilemma5/end.jpg'], ['']);
 
     var scenePosition = 0;
-    var dilemmaPosition = 4;
+    var dilemmaPosition = 0;
 
     var dilemmaer = [dilemma1, dilemma2, dilemma3, dilemma4, dilemma5, dilemma6]
     /* $('#canvas').css('background-image', 'url(' + dilemmaer[0].billedLokation[0] + ')');*/
