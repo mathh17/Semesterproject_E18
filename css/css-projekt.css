@@ -246,6 +246,7 @@ color: #88AB75 !important;
 /*Nicklas*/
 
 .contentBoxesTop {
+    cursor: pointer;
     height: 35.3vh;
     margin-top: 20vh;
     padding: 5vh;
@@ -253,6 +254,7 @@ color: #88AB75 !important;
 }
 
 .contentBoxesBottom {
+    cursor: pointer;
     height: 35.3vh;
     margin-top: 5vh;
     padding: 5vh;
