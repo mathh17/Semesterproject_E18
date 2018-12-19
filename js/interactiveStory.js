@@ -10,6 +10,7 @@ $(document).ready(function () {
     $("#valgBtn3, #valgBtn2").hide();
     $("#prøvIgenOgFremadBtn").hide();
     $("#prøvForFraBtn").hide();
+   
     let dilemma1 = new Dilemma(['../dilemmaer/Dilemma1/INTRO_JPG.jpg', '../dilemmaer/Dilemma1/INTROHISTORIE_JPG.jpg', '../dilemmaer/Dilemma1/INTROHISTORIE2_JPG.jpg', '../dilemmaer/Dilemma1/INTROHISTORIE3_JPG.jpg', '../dilemmaer/Dilemma1/INTROHISTORIE4_JPG.jpg', '../dilemmaer/Dilemma1/DILEMMA1_JPG.jpg', '../dilemmaer/Dilemma1/DILEMMA1.1_JPG.jpg', '../dilemmaer/Dilemma1/DILEMMA1.2_JPG.jpg'], ['../dilemmaer/Dilemma1/DILEMMA1_SVAR_1_JPG.jpg', '../dilemmaer/Dilemma1/DILEMMA1_SVAR_2_JPG.jpg', '../dilemmaer/Dilemma1/DILEMMA1_SVAR_3_JPG.jpg']);
 
 
@@ -35,12 +36,19 @@ $(document).ready(function () {
             dilemmaPosition++;
             BuildDilemma(dilemmaer[dilemmaPosition]);
         }
+        
     });
 
+    //Prøv dilemma igen.. dårligt navngivet..
     $("#forrigeDilemma").click(function () {
-        if (dilemmaPosition >= 0) {
+        //Elset´if er for første dilemma hvor den ikke skal starte fra intro hisorien, men fra dilemmaet
+        if (dilemmaPosition > 0) {
             scenePosition = 0;
             BuildDilemma(dilemmaer[dilemmaPosition]);
+        } else if(dilemmaPosition==0){
+            scenePosition=5;
+            BuildDilemma(dilemmaer[dilemmaPosition]);
+            
         }
     });
 
@@ -84,22 +92,25 @@ $(document).ready(function () {
     });
 
     function changePicture(billede) {
-
-
         $("button").fadeOut(100);
         $("img").slideUp("fast", function () {
             $("img").attr("src", billede);
             $("img").slideDown();
             $("button").fadeIn();
+            if(scenePosition==0 || dilemmaPosition == 0 && scenePosition==5)
+            $('#forrigeScene').hide();
         })
+        
+        
     }
 
     //Bygger dilemmaerne når der kligges på forrige dilemma og næste dilemma knapper
     function BuildDilemma(dilemma) {
-        if (dilemmaPosition != dilemmaer.length - 1) {
+        if (dilemmaPosition != dilemmaer.length - 1) { 
             AktiverFremTilbageKnapper();
+             
             $("#prøvIgenOgFremadBtn").hide();
-            changePicture(dilemma.sceneBilleder[0]);
+            changePicture(dilemma.sceneBilleder[scenePosition]);
 
         } else {
             changePicture('../dilemmaer/dilemma5/end.jpg');
@@ -107,7 +118,7 @@ $(document).ready(function () {
             $('#prøvForFraBtn').show();
         }
         //Else't er til slut picture
-
+        
     }
 
     //Shower Valg knapper og Hider frem/tilbage knapper
@@ -129,14 +140,14 @@ $(document).ready(function () {
     }
 
     function AktiverFremTilbageKnapper() {
-        $("#buttons").show();
-
+        $("#buttons").show();        
         //Tjekker om der er 2 eller 3 valg
-        if (dilemmaer[dilemmaPosition].svarBilleder.length == 2) {
+        //Er ikke sikker på at det kommenterede skal være her? Prøver at kommentere ud og se om den stadig virker
+       /* if (dilemmaer[dilemmaPosition].svarBilleder.length == 2) {
             $("#valgBtn3").hide();
         } else {
             $("#valgBtn2").hide();
-        }
+        }*/
     }
 
     function NæsteScene() {
