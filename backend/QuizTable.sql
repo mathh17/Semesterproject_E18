@@ -17,3 +17,4 @@ insert into quiztable values(default, "Hvad sker der hvis man drikker på tom ma
 GRANT ALL PRIVILEGES ON quiz.* TO sqluser@localhost;
 
 select * from quiztable;
+
