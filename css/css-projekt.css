@@ -4,7 +4,8 @@
        background-repeat: no-repeat;
     background-position: center;
     background-size: 115%;*/
-    background-color: lightgray;
+    background-image: url(../img/blur.jpg);
+    background-size: cover;
     height: 100vh;
     width: 100vw;
 }
